@@ -23,7 +23,7 @@ describe("Tags", function() {
       };
 
       expect(results).to.deep.equal(expected);
-    };
+    });
 
   });
 
