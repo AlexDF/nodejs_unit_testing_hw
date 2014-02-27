@@ -35,6 +35,19 @@ describe("Search", function() {
           ".test_files/dir2/d"
         ]);
         done();
+      });
+    });
+
+    it("should stop at a specified depth", function(done) {
+      search.scan(".test_files", 1, function(err, flist) {
+        expect(flist).to.deep.equal([
+          ".test_files/a",
+          ".test_files/b",
+        ]);
+        done();
+      });
+    });
+
   });
 });
 
